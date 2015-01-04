@@ -20,5 +20,9 @@ public class WasRun extends TestCase {
 	public void tearDown() {
 		log += "tearDown "; 
 	}
+	
+	public void testBrokenMethod() {
+		throw new RuntimeException();
+	}
 
 }
