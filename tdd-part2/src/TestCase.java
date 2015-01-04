@@ -24,10 +24,10 @@ public class TestCase {
 			result.testStarted();
 			Method m = cls.getDeclaredMethod(methodName, null);
 			m.invoke(this);
-			this.tearDown();
 		} catch (Exception e) {
-			e.printStackTrace();
+			result.testFailed();
 		}
+		this.tearDown();
 		return result;
 	}
 
