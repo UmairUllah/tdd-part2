@@ -16,8 +16,7 @@ public class TestCase {
 
 	}
 
-	public TestResult run() {
-		TestResult result = new TestResult();
+	public void run( TestResult result ) {
 		Class cls = this.getClass();
 		try {
 			this.setUp();
@@ -28,7 +27,6 @@ public class TestCase {
 			result.testFailed();
 		}
 		this.tearDown();
-		return result;
 	}
 
 }
